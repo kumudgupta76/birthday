@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Little Something Special ✨</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="background-gradient"></div>
+    
+    <!-- Floating Particles Container -->
+    <div class="particles-container" id="particles"></div>
+    
+    <!-- Confetti Container -->
+    <div class="confetti-container" id="confetti"></div>
+
+    <!-- Progress Indicator -->
+    <div class="progress-container">
+        <div class="progress-bar" id="progress-bar"></div>
+        <div class="progress-dots" id="progress-dots"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container">
+        
+        <!-- Section 1: Intro -->
+        <section class="section section-intro active" id="section-1">
+            <div class="card card-main floating">
+                <div class="card-content">
+                    <div class="intro-icon">
+                        <span class="wave-emoji">👋</span>
+                    </div>
+                    <p class="typewriter-text" id="intro-text"></p>
+                </div>
+                <button class="btn-next pulse-glow" id="btn-next-1" aria-label="Continue">
+                    <span class="btn-text">Let's begin</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 2: Build Up -->
+        <section class="section section-buildup" id="section-2">
+            <div class="card card-buildup">
+                <div class="card-content">
+                    <div class="mystery-container">
+                        <div class="mystery-box" id="mystery-box">
+                            <span class="mystery-icon">🎁</span>
+                        </div>
+                        <p class="mystery-text" id="mystery-text"></p>
+                    </div>
+                </div>
+                <button class="btn-next" id="btn-next-2" aria-label="Continue">
+                    <span class="btn-text">Unwrap</span>
+                    <span class="btn-arrow">🎀</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 3: Birthday Reveal -->
+        <section class="section section-birthday" id="section-3">
+            <div class="card card-birthday">
+                <div class="card-content">
+                    <div class="birthday-animation">
+                        <div class="cake-container">
+                            <div class="candle-glow"></div>
+                            <span class="cake-emoji bounce-in">🎂</span>
+                        </div>
+                        <div class="balloons">
+                            <span class="balloon balloon-1">🎈</span>
+                            <span class="balloon balloon-2">🎈</span>
+                            <span class="balloon balloon-3">🎈</span>
+                        </div>
+                    </div>
+                    <h1 class="birthday-title">
+                        <span class="title-word" data-delay="0">Happy</span>
+                        <span class="title-word" data-delay="1">Birthday!</span>
+                    </h1>
+                    <div class="birthday-wishes">
+                        <p class="wish-line" data-delay="0">Hope today brings you smiles,</p>
+                        <p class="wish-line" data-delay="1">good conversations,</p>
+                        <p class="wish-line" data-delay="2">and moments that linger a bit longer <span class="sparkle">✨</span></p>
+                    </div>
+                </div>
+                <button class="btn-next" id="btn-next-3" aria-label="Continue">
+                    <span class="btn-text">Continue</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 4: Fun Facts / Interactive -->
+        <section class="section section-interactive" id="section-4">
+            <div class="card card-interactive">
+                <div class="card-content">
+                    <h2 class="section-title">A Quick Birthday Quiz 🎯</h2>
+                    <div class="quiz-container" id="quiz-container">
+                        <p class="quiz-question" id="quiz-question"></p>
+                        <div class="quiz-options" id="quiz-options"></div>
+                        <div class="quiz-result" id="quiz-result"></div>
+                    </div>
+                </div>
+                <button class="btn-next hidden" id="btn-next-4" aria-label="Continue">
+                    <span class="btn-text">Next</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 5: Fortune Cookie -->
+        <section class="section section-fortune" id="section-5">
+            <div class="card card-fortune">
+                <div class="card-content">
+                    <h2 class="section-title">Birthday Fortune 🥠</h2>
+                    <div class="fortune-cookie-container">
+                        <div class="fortune-cookie" id="fortune-cookie">
+                            <span class="cookie-emoji">🥠</span>
+                            <p class="cookie-hint">Click to crack open!</p>
+                        </div>
+                        <div class="fortune-message hidden" id="fortune-message">
+                            <p class="fortune-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-next hidden" id="btn-next-5" aria-label="Continue">
+                    <span class="btn-text">Continue</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 6: Memory Lane / Timeline -->
+        <section class="section section-timeline" id="section-6">
+            <div class="card card-timeline">
+                <div class="card-content">
+                    <h2 class="section-title">Quick Facts About Birthdays 📅</h2>
+                    <div class="timeline-container" id="timeline-container">
+                        <div class="timeline-item" data-delay="0">
+                            <span class="timeline-icon">🌍</span>
+                            <p class="timeline-text">About 21 million people share your birthday worldwide!</p>
+                        </div>
+                        <div class="timeline-item" data-delay="1">
+                            <span class="timeline-icon">⭐</span>
+                            <p class="timeline-text">Your birthday is statistically the most special day of the year (for you)!</p>
+                        </div>
+                        <div class="timeline-item" data-delay="2">
+                            <span class="timeline-icon">🎵</span>
+                            <p class="timeline-text">"Happy Birthday" is sung about 1 billion times every year!</p>
+                        </div>
+                        <div class="timeline-item" data-delay="3">
+                            <span class="timeline-icon">🍰</span>
+                            <p class="timeline-text">Ancient Greeks started birthday cakes with moon-shaped cakes for Artemis!</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-next" id="btn-next-6" aria-label="Continue">
+                    <span class="btn-text">More</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 7: Engineer Section -->
+        <section class="section section-engineer" id="section-7">
+            <div class="card card-engineer">
+                <div class="card-content">
+                    <div class="code-window">
+                        <div class="code-header">
+                            <span class="code-dot red"></span>
+                            <span class="code-dot yellow"></span>
+                            <span class="code-dot green"></span>
+                            <span class="code-title">birthday_wish.py</span>
+                        </div>
+                        <div class="code-body">
+                            <pre class="code-content" id="code-content"></pre>
+                        </div>
+                    </div>
+                    <div class="terminal-output hidden" id="terminal-output">
+                        <div class="terminal-header">
+                            <span class="terminal-title">Output</span>
+                        </div>
+                        <div class="terminal-body">
+                            <p class="terminal-text" id="terminal-text"></p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-next btn-run hidden" id="btn-run-code" aria-label="Run Code">
+                    <span class="btn-text">▶ Run Code</span>
+                </button>
+                <button class="btn-next hidden" id="btn-next-7" aria-label="Continue">
+                    <span class="btn-text">Continue</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 8: Wishes Game -->
+        <section class="section section-wishes-game" id="section-8">
+            <div class="card card-wishes-game">
+                <div class="card-content">
+                    <h2 class="section-title">Pop the Birthday Balloons! 🎈</h2>
+                    <p class="game-instruction">Tap the balloons to reveal birthday wishes!</p>
+                    <div class="balloon-game" id="balloon-game">
+                        <div class="game-balloon" data-wish="May your code always compile on the first try! 💻">🎈</div>
+                        <div class="game-balloon" data-wish="May your coffee always be the perfect temperature! ☕">🎈</div>
+                        <div class="game-balloon" data-wish="May your bugs be easy to find and fix! 🐛">🎈</div>
+                        <div class="game-balloon" data-wish="May your meetings always end early! 📅">🎈</div>
+                        <div class="game-balloon" data-wish="May your Wi-Fi never drop during important calls! 📶">🎈</div>
+                        <div class="game-balloon" data-wish="May you always find the perfect Stack Overflow answer! 🔍">🎈</div>
+                    </div>
+                    <div class="wish-display hidden" id="wish-display">
+                        <p class="revealed-wish" id="revealed-wish"></p>
+                    </div>
+                    <div class="game-progress">
+                        <span id="balloons-popped">0</span> / 6 wishes revealed
+                    </div>
+                </div>
+                <button class="btn-next hidden" id="btn-next-8" aria-label="Continue">
+                    <span class="btn-text">Continue</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 9: Make a Wish -->
+        <section class="section section-make-wish" id="section-9">
+            <div class="card card-make-wish">
+                <div class="card-content">
+                    <h2 class="section-title">Make a Birthday Wish 🌟</h2>
+                    <div class="candle-blow-container">
+                        <div class="big-candle" id="big-candle">
+                            <div class="candle-body"></div>
+                            <div class="candle-flame" id="candle-flame">
+                                <div class="flame-inner"></div>
+                            </div>
+                        </div>
+                        <p class="blow-instruction" id="blow-instruction">Close your eyes, make a wish, then click the candle to blow it out!</p>
+                    </div>
+                    <div class="wish-made hidden" id="wish-made">
+                        <p class="wish-made-text">✨ May your wish come true! ✨</p>
+                    </div>
+                </div>
+                <button class="btn-next hidden" id="btn-next-9" aria-label="Continue">
+                    <span class="btn-text">Almost done...</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 10: Compliments -->
+        <section class="section section-compliments" id="section-10">
+            <div class="card card-compliments">
+                <div class="card-content">
+                    <h2 class="section-title">A Few Things I've Noticed 🙂</h2>
+                    <div class="compliments-container" id="compliments-container">
+                        <div class="compliment-card" data-delay="0">
+                            <span class="compliment-icon">💬</span>
+                            <p class="compliment-text">Our conversations have been really easy and fun</p>
+                        </div>
+                        <div class="compliment-card" data-delay="1">
+                            <span class="compliment-icon">🧠</span>
+                            <p class="compliment-text">You seem genuinely thoughtful</p>
+                        </div>
+                        <div class="compliment-card" data-delay="2">
+                            <span class="compliment-icon">😊</span>
+                            <p class="compliment-text">Your vibe is refreshingly genuine</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="btn-next" id="btn-next-10" aria-label="Continue">
+                    <span class="btn-text">One last thing...</span>
+                    <span class="btn-arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Section 11: Closing -->
+        <section class="section section-closing" id="section-11">
+            <div class="card card-closing">
+                <div class="card-content">
+                    <div class="closing-message">
+                        <p class="closing-line line-1">So...</p>
+                        <p class="closing-line line-2">getting to talk to you recently</p>
+                        <p class="closing-line line-3">has been genuinely nice <span class="smile">🙂</span></p>
+                        <div class="closing-divider"></div>
+                        <p class="closing-line line-4">This took a bit of effort,</p>
+                        <p class="closing-line line-5">but I hope it made you smile.</p>
+                        <div class="closing-divider second"></div>
+                        <p class="closing-line line-6">Here's to more conversations,</p>
+                        <p class="closing-line line-7">more laughs,</p>
+                        <p class="closing-line line-8">and maybe... a coffee sometime? ☕</p>
+                    </div>
+                    <div class="signature">
+                        <span class="signature-text">Happy Birthday once again!</span>
+                        <div class="signature-line">
+                            <span class="signature-dash">—</span>
+                            <span class="signature-name">Kumud</span>
+                        </div>
+                    </div>
+                    <div class="final-emoji-burst" id="final-emoji-burst"></div>
+                </div>
+            </div>
+            
+            <!-- Floating Hearts -->
+            <div class="floating-hearts" id="floating-hearts"></div>
+        </section>
+
+    </main>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>
