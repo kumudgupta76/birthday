@@ -39,26 +39,28 @@ const CONFIG = {
 // Text Content
 // ============================================
 const TEXT = {
-    intro: "Hi there! 🙂\nToday feels a little special…\nI made something for you.",
-    mystery: "I've been working on a little surprise...\nReady to see what it is?",
-    code: `# birthday_wish.py
-# A special program just for you
+    intro: "Hi Ritika! 🙂\nToday is a special day…\nI made something just for you.",
+    mystery: "I spent some time on this little surprise...\nReady to see what it is?",
+    code: `# ritika_birthday.py
+# A personalized program for Ritika's 26th birthday
 
-def calculate_birthday_joy():
-    bugs = 0
+def celebrate_ritika():
+    age = 26  # Still young!
+    hobbies = ["badminton", "painting", "coding"]
     happiness = float('inf')
-    coffee_level = "optimal"
     
     return {
-        "status": "bug_free",
-        "happiness": happiness,
-        "message": "Have an amazing day! 🎉"
+        "birthday_girl": "Ritika",
+        "status": "absolutely_awesome",
+        "smash_accuracy": "100%",
+        "art_skills": "impressive",
+        "message": "Happy Birthday, Ritika! 🎉"
     }
 
 # Running birthday protocol...
-result = calculate_birthday_joy()
+result = celebrate_ritika()
 print(result["message"])`,
-    terminalOutput: ">>> Running birthday_wish.py...\n>>> Compiling happiness...\n>>> Optimizing joy levels...\n>>> \n>>> Have an amazing day! 🎉\n>>> \n>>> Process completed with 0 bugs! ✓"
+    terminalOutput: ">>> Running ritika_birthday.py...\n>>> Loading badminton skills... ✓\n>>> Loading painting talents... ✓\n>>> Compiling birthday wishes...\n>>> \n>>> Happy Birthday, Ritika! 🎉\n>>> \n>>> Process completed with 0 bugs! ✓"
 };
 
 // ============================================
@@ -67,7 +69,7 @@ print(result["message"])`,
 const QUIZ = {
     questions: [
         {
-            question: "What's the most important thing on a birthday?",
+            question: "What's the best way to celebrate a birthday?",
             options: [
                 "Cake 🍰",
                 "Gifts 🎁",
@@ -75,18 +77,18 @@ const QUIZ = {
                 "All of the above! 🎉"
             ],
             correct: 3,
-            response: "Correct! All of these make birthdays special! 🎉"
+            response: "Correct! Why choose when you can have it all! 🎉"
         },
         {
-            question: "What do software engineers wish for on their birthday?",
+            question: "What would be the perfect birthday wish for Ritika?",
             options: [
-                "No bugs in production",
-                "Infinite coffee",
-                "Meetings that could've been emails",
-                "All of the above (obviously)"
+                "Win everything you wish for",
+                "Create art that inspires",
+                "Bug-free code forever",
+                "All of the above + happiness ✨"
             ],
             correct: 3,
-            response: "You know us too well! 😄"
+            response: "You deserve all of it and more! 😄"
         }
     ],
     currentIndex: 0
@@ -96,11 +98,11 @@ const QUIZ = {
 // Fortune Messages
 // ============================================
 const FORTUNES = [
-    "A beautiful adventure awaits you in the coming year. ✨",
-    "The best conversations are yet to come. 💬",
-    "Your code will compile on the first try this week. 💻",
-    "Something wonderful is about to happen. 🌟",
-    "The universe is conspiring to make you smile. 😊"
+    "This year will bring beautiful colors to your canvas — literally and figuratively. 🎨",
+    "A championship-level smash awaits you on the court this year! 🏸",
+    "The best conversations of your life are yet to come. 💬",
+    "Your creativity will unlock doors you didn't know existed. ✨",
+    "Someone is thinking of you right now and smiling. 😊"
 ];
 
 // ============================================
